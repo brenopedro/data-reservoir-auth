@@ -36,7 +36,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
                 .and()
                     .withClient("client-station")
                     .secret(passwordEncoder.encode("client123"))
-                    .authorizedGrantTypes("password", "refresh_token")
+                    .authorizedGrantTypes("password")
                     .scopes("READ")
                 .and()
                     .withClient("admin-client")
