@@ -1,4 +1,4 @@
-package com.reservoir.datareservoir.auth.core;
+package com.reservoir.datareservoir.auth.core.properties;
 
 import lombok.Getter;
 import lombok.Setter;

@@ -15,6 +15,9 @@ import org.springframework.security.oauth2.config.annotation.web.configurers.Aut
 import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter;
 import org.springframework.security.oauth2.provider.token.store.KeyStoreKeyFactory;
 
+import com.reservoir.datareservoir.auth.core.properties.JwtKeyStoreProperties;
+import com.reservoir.datareservoir.auth.core.properties.ResourceProperties;
+
 @AllArgsConstructor
 @Configuration
 @EnableAuthorizationServer
@@ -24,23 +27,24 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
     private final AuthenticationManager authenticationManager;
     private final UserDetailsService userDetailsService;
     private final JwtKeyStoreProperties jwtKeyStoreProperties;
+    private final ResourceProperties resourceProperties;
 
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
         clients
                 .inMemory()
-                    .withClient("base-station")
-                    .secret(passwordEncoder.encode("base123"))
+                    .withClient(resourceProperties.getBaseUsername())
+                    .secret(passwordEncoder.encode(resourceProperties.getBasePassword()))
                     .authorizedGrantTypes("client_credentials")
                     .scopes("WRITE")
                 .and()
-                    .withClient("client-station")
-                    .secret(passwordEncoder.encode("client123"))
+                    .withClient(resourceProperties.getClientUsername())
+                    .secret(passwordEncoder.encode(resourceProperties.getClientPassword()))
                     .authorizedGrantTypes("password")
                     .scopes("READ")
                 .and()
-                    .withClient("admin-client")
-                    .secret(passwordEncoder.encode("admin123"))
+                    .withClient(resourceProperties.getAdminUsername())
+                    .secret(passwordEncoder.encode(resourceProperties.getAdminPassword()))
                     .authorizedGrantTypes("password", "refresh_token")
                     .scopes("READ", "WRITE");
     }

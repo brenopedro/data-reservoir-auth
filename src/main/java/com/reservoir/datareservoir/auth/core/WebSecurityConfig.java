@@ -9,18 +9,25 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
+import com.reservoir.datareservoir.auth.core.properties.ClientProperties;
+
+import lombok.AllArgsConstructor;
+
+@AllArgsConstructor
 @Configuration
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
+	private final ClientProperties clientProperties;
+	
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.inMemoryAuthentication()
-                    .withUser("brenoClient")
-                    .password(passwordEncoder().encode("123"))
+                    .withUser(clientProperties.getWebServicePassword())
+                    .password(passwordEncoder().encode(clientProperties.getWebServicePassword()))
                     .authorities("base-station")
                 .and()
-                    .withUser("brenoAdmin")
-                    .password(passwordEncoder().encode("123"))
+                    .withUser(clientProperties.getAdminUsername())
+                    .password(passwordEncoder().encode(clientProperties.getAdminPassword()))
                     .authorities("ADMIN");
     }
 
