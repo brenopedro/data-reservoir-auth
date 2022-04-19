@@ -1,0 +1,8 @@
+com\reservoir\datareservoir\auth\core\properties\JwtKeyStoreProperties.class
+com\reservoir\datareservoir\auth\DataReservoirAuthApplication.class
+com\reservoir\datareservoir\auth\core\properties\ClientProperties.class
+com\reservoir\datareservoir\auth\core\properties\ResourceProperties.class
+com\reservoir\datareservoir\auth\core\WebSecurityConfig.class
+com\reservoir\datareservoir\auth\core\AuthorizationServerConfig.class
+META-INF\spring-configuration-metadata.json
+com\reservoir\datareservoir\auth\core\CorsConfig.class

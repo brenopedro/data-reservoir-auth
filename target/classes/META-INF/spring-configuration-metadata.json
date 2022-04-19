@@ -1,0 +1,87 @@
+{
+  "groups": [
+    {
+      "name": "datareservoir-jwt-keystore",
+      "type": "com.reservoir.datareservoir.auth.core.properties.JwtKeyStoreProperties",
+      "sourceType": "com.reservoir.datareservoir.auth.core.properties.JwtKeyStoreProperties"
+    },
+    {
+      "name": "datareservoir.client",
+      "type": "com.reservoir.datareservoir.auth.core.properties.ClientProperties",
+      "sourceType": "com.reservoir.datareservoir.auth.core.properties.ClientProperties"
+    },
+    {
+      "name": "datareservoir.resource",
+      "type": "com.reservoir.datareservoir.auth.core.properties.ResourceProperties",
+      "sourceType": "com.reservoir.datareservoir.auth.core.properties.ResourceProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "datareservoir-jwt-keystore.keypair-alias",
+      "type": "java.lang.String",
+      "sourceType": "com.reservoir.datareservoir.auth.core.properties.JwtKeyStoreProperties"
+    },
+    {
+      "name": "datareservoir-jwt-keystore.password",
+      "type": "java.lang.String",
+      "sourceType": "com.reservoir.datareservoir.auth.core.properties.JwtKeyStoreProperties"
+    },
+    {
+      "name": "datareservoir-jwt-keystore.path",
+      "type": "java.lang.String",
+      "sourceType": "com.reservoir.datareservoir.auth.core.properties.JwtKeyStoreProperties"
+    },
+    {
+      "name": "datareservoir.client.admin-password",
+      "type": "java.lang.String",
+      "sourceType": "com.reservoir.datareservoir.auth.core.properties.ClientProperties"
+    },
+    {
+      "name": "datareservoir.client.admin-username",
+      "type": "java.lang.String",
+      "sourceType": "com.reservoir.datareservoir.auth.core.properties.ClientProperties"
+    },
+    {
+      "name": "datareservoir.client.web-service-password",
+      "type": "java.lang.String",
+      "sourceType": "com.reservoir.datareservoir.auth.core.properties.ClientProperties"
+    },
+    {
+      "name": "datareservoir.client.web-service-username",
+      "type": "java.lang.String",
+      "sourceType": "com.reservoir.datareservoir.auth.core.properties.ClientProperties"
+    },
+    {
+      "name": "datareservoir.resource.admin-password",
+      "type": "java.lang.String",
+      "sourceType": "com.reservoir.datareservoir.auth.core.properties.ResourceProperties"
+    },
+    {
+      "name": "datareservoir.resource.admin-username",
+      "type": "java.lang.String",
+      "sourceType": "com.reservoir.datareservoir.auth.core.properties.ResourceProperties"
+    },
+    {
+      "name": "datareservoir.resource.base-password",
+      "type": "java.lang.String",
+      "sourceType": "com.reservoir.datareservoir.auth.core.properties.ResourceProperties"
+    },
+    {
+      "name": "datareservoir.resource.base-username",
+      "type": "java.lang.String",
+      "sourceType": "com.reservoir.datareservoir.auth.core.properties.ResourceProperties"
+    },
+    {
+      "name": "datareservoir.resource.client-password",
+      "type": "java.lang.String",
+      "sourceType": "com.reservoir.datareservoir.auth.core.properties.ResourceProperties"
+    },
+    {
+      "name": "datareservoir.resource.client-username",
+      "type": "java.lang.String",
+      "sourceType": "com.reservoir.datareservoir.auth.core.properties.ResourceProperties"
+    }
+  ],
+  "hints": []
+}
