@@ -45,7 +45,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
                 .and()
                     .withClient(resourceProperties.getAdminUsername())
                     .secret(passwordEncoder.encode(resourceProperties.getAdminPassword()))
-                    .authorizedGrantTypes("password", "refresh_token")
+                    .authorizedGrantTypes("password")
                     .scopes("READ", "WRITE");
     }
 
